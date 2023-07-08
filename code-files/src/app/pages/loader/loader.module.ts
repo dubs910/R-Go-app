@@ -8,6 +8,7 @@ import { LoaderPageRoutingModule } from './loader-routing.module';
 
 import { LoaderPage } from './loader.page';
 
+
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +16,6 @@ import { LoaderPage } from './loader.page';
     IonicModule,
     LoaderPageRoutingModule
   ],
-  declarations: [LoaderPage]
+  declarations: [LoaderPage,]
 })
 export class LoaderPageModule {}

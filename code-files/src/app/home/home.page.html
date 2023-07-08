@@ -1,9 +1,29 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+
+    <!--Button for burger menu-->
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon name="menu" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <!--Button for Login and Home-->
+    <ion-buttons slot="end">
+      <ion-button>
+       <ion-icon name="people-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+
+      <ion-button>
+        <ion-icon name="home-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <!--For the title-->
     <ion-title>
-      Welcome to R-Go!
+      R-Go Food Catering
     </ion-title>
   </ion-toolbar>
+
 </ion-header>
 
 <ion-content [fullscreen]="true">
@@ -17,16 +37,10 @@
 </div>
 
   <div id="container">
-    <strong>Get Started</strong>
-    <br><br>
-    <!-- redirect to login / register page-->
-    <ion-button>Login / Register</ion-button> 
-    <!-- redirect to home/loader page-->
-    <br><br>
-    <ion-button>Home</ion-button>
+    <strong>DITO SI FOODS</strong>
   </div>
 
-
+<!--For the buttons at the bottom, change tabs-->
   <ion-tabs>
     <ion-tab-bar slot="bottom">
       <ion-tab-button tab="home">
@@ -36,10 +50,6 @@
       <ion-tab-button tab="cart">
         <ion-icon name="cart-outline"></ion-icon>
         Cart
-      </ion-tab-button>
-      <ion-tab-button tab="library">
-        <ion-icon name="library"></ion-icon>
-        Library
       </ion-tab-button>
       <ion-tab-button tab="search">
         <ion-icon name="search"></ion-icon>
