@@ -1,31 +1,18 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Welcome to R-Go!
-    </ion-title>
+    <ion-title>Cart</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  
-<div id="header">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Welcome to R-Go!</ion-title>
+      <ion-title size="large">cart</ion-title>
     </ion-toolbar>
   </ion-header>
-</div>
 
-  <div id="container">
-    <strong>Get Started</strong>
-    <br><br>
-    <!-- redirect to login / register page-->
-    <ion-button>Login / Register</ion-button> 
-    <!-- redirect to home/loader page-->
-    <br><br>
-    <ion-button>Home</ion-button>
-  </div>
-
+  <!--Search bar for the cart-->
+  <ion-searchbar show-cancel-button="always" placeholder="Always Show"></ion-searchbar>
 
   <ion-tabs>
     <ion-tab-bar slot="bottom">
@@ -47,5 +34,5 @@
       </ion-tab-button>
     </ion-tab-bar>
   </ion-tabs>
-  
+
 </ion-content>
