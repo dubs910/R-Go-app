@@ -24,3 +24,15 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+
+ion-searchbar {
+    .searchbar-input-container{
+        input{
+            padding-top: 5x !important;
+            padding-bottom: 5px !important;
+            font-size: 15px !important
+
+        }
+    }
+}
