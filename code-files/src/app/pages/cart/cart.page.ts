@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Category } from 'src/app/models/category.model';
 import { Food } from 'src/app/models/food.model';
 import { FoodService } from 'src/app/services/food.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -11,7 +12,7 @@ import { FoodService } from 'src/app/services/food.service';
 export class CartPage implements OnInit {
   categories: Category[] = [];
   foods: Food[] = [];
-  constructor(private foodService: FoodService) { }
+  constructor(private foodService: FoodService, private router: Router) { }
 
   ngOnInit() {
     this.getCategories();
@@ -45,5 +46,9 @@ export class CartPage implements OnInit {
       active: false,
     },
   ];  
-}
+  }
+
+  goToDetailsPage(id: number) {
+    this.router.navigate(['details', id]);
+  }
 }
