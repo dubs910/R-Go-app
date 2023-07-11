@@ -14,7 +14,7 @@ export class FoodService {
                 title2:'Pinoy Style Spaghetti + Tetra Drink',
                 price: 75,
                 image: '../../assets/img/Package 1/Snack1.png',
-                description: 'Snack',
+                description: 'Experience the savory delight of Pinoy-style Spaghetti with Tetra Juice Pack. A flavorful fusion that satisfies and tantalizes, this dish is a true Pinoy favorite.',
             },
             {
                 id: 2,

@@ -13,22 +13,27 @@
         text-align:center;
 
         .title {
-            font-weight: 700;
-            font-size: 1.1rem;
-            margin-bottom: .2rem;
-            color: #1d1d1d;
+            font-weight: 1000;
+            font-size: 1.5rem;
+            margin-bottom: .05rem;
+            color: #fffbfb;
+            background-color: #9E362B;
+            border-radius: 10px;
+            text-shadow: .3px 1.8px 1.3px rgba(74, 52, 51, 0.988);
         }
         .title2 {
             font-weight: 700;
             font-size: 0.8rem;
-            margin-bottom: 1rem;
+            margin-bottom: .8rem;
             color: #1d1d1d;
+            font-style: italic;
         }
         .subtitle {
             font-size: 1.3rem;
             font-weight: 700;
-            color: #ffb800;
-            margin-top: 0;
+            color: #d29314;
+            margin-bottom: 1.5rem;  
+            text-shadow: .3px 1.8px 1.3px  rgba(126, 66, 57, 0.988);
 
             sup {
                 font-size: 1rem;
@@ -43,7 +48,7 @@
             transform: translateX(-50%);
 
             ion-button {
-                --background: #6b45bc;
+                --background: #9E362B;
                 font-weight: 700;
                 color: #ffff;
                 width: 40px;
