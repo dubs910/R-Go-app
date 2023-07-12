@@ -1,13 +1,14 @@
-import { Component, Input} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-badge',
   templateUrl: './badge.component.html',
   styleUrls: ['./badge.component.scss'],
 })
-export class BadgeComponent{
+export class BadgeComponent  implements OnInit {
 
-    @Input() icon!: string;
-    @Input() text!: string;
+  constructor() { }
+
+  ngOnInit() {}
 
 }

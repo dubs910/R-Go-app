@@ -1,11 +1,11 @@
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
-import { BadgeComponent } from "./badge.component";
 import { IonicModule } from "@ionic/angular";
+import { ButtonOrderComponent } from "./button-order.component";
 
 @NgModule({
-    declarations: [ BadgeComponent ],
+    declarations: [ ButtonOrderComponent ],
     imports: [ CommonModule, IonicModule ],
-    exports: [ BadgeComponent ],
+    exports: [ ButtonOrderComponent ],
 })
-export class BadgeModule{}
+export class ButtonOrderModule{}

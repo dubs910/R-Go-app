@@ -1,13 +1,7 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>cart-listing</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+<h3 class="title">{{(cartItems$|async)}} towards to cart</h3>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">cart-listing</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<!--ADDED PACKAGES TO CART FROM CART-->
+
+<app-cart-items></app-cart-items>
 </ion-content>

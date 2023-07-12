@@ -11,20 +11,23 @@
   <!--Details of the food packages upon clicking-->
 
   <div class="card">
+    <!--div for the image of the package-->
     <div class="image">
       <ion-img [src]="food.image"></ion-img>
     </div>
-
+    <!--div for the name of the package-->
     <div class="card-content">
       <div class="card-title">
         <h1 class="ion-no-margin">{{food.title}}</h1>
         <p class="ion-no-margin">{{food.title2}}</p>
       </div>
     </div>
-
+    <!--div for the description of the product-->
     <div class="about">
-      <h1>About</h1>
+      <h1></h1>
       <p>{{food.description}}</p>
     </div>
+
+    <app-button-order (click)="addItemToCart()">Add to cart</app-button-order>
   </div>
 </ion-content>
