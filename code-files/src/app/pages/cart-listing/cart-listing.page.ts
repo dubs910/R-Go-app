@@ -15,6 +15,7 @@ export class CartListingPage implements OnInit {
 
   ngOnInit() {
     this.cartItems$ = this.cartService.getCart();
+    this.cartItems$.subscribe(cartItems => console.log(cartItems));
   }
 
 }
