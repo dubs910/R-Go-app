@@ -17,7 +17,7 @@ import { CartItemsModule } from 'src/app/components/cart-items/cart-items.module
     IonicModule,
     CartListingPageRoutingModule,
     CartPageModule,
-    CartItemsModule
+    CartItemsModule,
   ],
   declarations: [CartListingPage]
 })

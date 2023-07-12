@@ -18,4 +18,10 @@ export class CartListingPage implements OnInit {
     this.cartItems$.subscribe(cartItems => console.log(cartItems));
   }
 
+  onIncrease(item: CartItem) {}
+
+  onDecrease(item: CartItem) {}
+
+  removeFromCart(item: CartItem) {}
+
 }

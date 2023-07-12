@@ -1,7 +1,37 @@
 <ion-content>
 <h3 class="title">{{(cartItems$|async)?.length}} towards to cart</h3>
 
-<!--ADDED PACKAGES TO CART FROM CART-->
+<!--.ADDED PACKAGES TO CART FROM CART-->
+<!--<app-cart-items></app-cart-items>-->
 
-<app-cart-items></app-cart-items>
+<ion-list lines="none">
+    <ion-item-sliding *ngFor="let item of cartItems$|async">
+        <ion-item>
+            <app-cart-items [item]="item"(increase)="onIncrease(item)" (decrease)="onDecrease(item)"></app-cart-items>
+        </ion-item>
+        <ion-item-options side="end">
+            <ion-item-option (click)="removeFromCart(item)">
+                <ion-icon name='trash-outline' size='large' color='danger'></ion-icon>
+            </ion-item-option>
+        </ion-item-options>
+    </ion-item-sliding>
+</ion-list>
+
+    <!-- When the cart is empty -->
+
+<div class="empty-cart" *ngIf="!(cartItems$|async)?.length">
+    <ion-icon name="cart-outline"></ion-icon>
+    <p>Cart is empty</p>
+</div>
+
+
+        <!-- SAMPLE OF ARRAY FOR FOODS 
+                    {
+            id: 1,
+            name: 'Pork Mami w/ Egg + Tetra Drink',
+            price: 90,
+            quantity: 1,
+            image: '../../assets/img/FoodNew/Bfast1.png'
+        },
+        -->
 </ion-content>

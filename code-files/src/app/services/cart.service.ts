@@ -6,7 +6,8 @@ import { CartItem } from "../models/cart-item.model";
     providedIn: 'root'
 })
 export class CartService {
-    private items$ = new BehaviorSubject<CartItem[]>([]);
+    private items$ = new BehaviorSubject<CartItem[]>([
+    ]);
 
     getCart(){
         return this.items$.asObservable();
