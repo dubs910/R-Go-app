@@ -7,6 +7,13 @@ import { CartItem } from "../models/cart-item.model";
 })
 export class CartService {
     private items$ = new BehaviorSubject<CartItem[]>([
+        {
+            id: 1,
+            name: 'Pork Mami w/ Egg + Tetra Drink',
+            price: 90,
+            quantity: 1,
+            image: '../../assets/img/FoodNew/Bfast1.png'
+        },
     ]);
 
     getCart(){
