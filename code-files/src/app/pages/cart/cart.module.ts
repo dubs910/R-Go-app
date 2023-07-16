@@ -11,6 +11,7 @@ import { SearchbarModule } from 'src/app/components/searchbar/searchbar.module';
 import { CategoryItemModule } from 'src/app/components/category-item/category-item.module';
 import { FoodCardModule } from 'src/app/components/food-card/food-card.module';
 
+
 @NgModule({
   imports: [
     CommonModule,
@@ -19,7 +20,7 @@ import { FoodCardModule } from 'src/app/components/food-card/food-card.module';
     CartPageRoutingModule,
     SearchbarModule,
     CategoryItemModule,
-    FoodCardModule
+    FoodCardModule,
   ],
   declarations: [CartPage]
 })

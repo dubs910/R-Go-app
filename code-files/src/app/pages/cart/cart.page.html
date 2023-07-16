@@ -1,42 +1,20 @@
-<!--
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Cart</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">cart</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  //Search bar for the cart//
-  <ion-searchbar show-cancel-button="always" placeholder="Always Show"></ion-searchbar>
-
-</ion-content>
-
--->
-
 <ion-content>
-<!--header-->
+  <!--header-->
   <div class="header">
     <h1></h1>
   </div>
 
-<!--Searchbar-->
-  <app-searchbar></app-searchbar>
+  <!--Searchbar-->
+  <app-searchbar (search)="onSearch($any($event.target).value)"></app-searchbar>
 
-<!--Categories-->
-<div class="categories">
-  <app-category-item *ngFor="let item of categories" [item]="item"></app-category-item>
-</div>
+  <!--Categories-->
+  <div class="categories">
+    <app-category-item *ngFor="let item of categories" [item]="item"></app-category-item>
+  </div>
 
-<!--Products-->
-<div class="h1list-header">Combo Meals</div>
-<div class="food-list">
-  <app-food-card *ngFor="let food of foods" [item]="food" (clicked)="goToDetailsPage(food.id)"></app-food-card>
-</div>
-
+  <!--Products-->
+  <div class="h1list-header">Combo Meals</div>
+  <div class="food-list">
+    <app-food-card *ngFor="let food of filteredFoods" [item]="food" (clicked)="goToDetailsPage(food.id)"></app-food-card>
+  </div>
 </ion-content>
