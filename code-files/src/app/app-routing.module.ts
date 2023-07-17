@@ -35,7 +35,6 @@ const routes: Routes = [
     path: 'cart-listing',
     loadChildren: () => import('./pages/cart-listing/cart-listing.module').then( m => m.CartListingPageModule)
   },
-
 ];
 
 @NgModule({

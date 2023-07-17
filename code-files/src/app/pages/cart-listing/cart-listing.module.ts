@@ -9,6 +9,7 @@ import { CartListingPageRoutingModule } from './cart-listing-routing.module';
 import { CartListingPage } from './cart-listing.page';
 import { CartPageModule } from '../cart/cart.module';
 import { CartItemsModule } from 'src/app/components/cart-items/cart-items.module';
+import { ButtonOrderModule } from 'src/app/components/button-order/button-order.module';
 
 @NgModule({
   imports: [
@@ -18,6 +19,7 @@ import { CartItemsModule } from 'src/app/components/cart-items/cart-items.module
     CartListingPageRoutingModule,
     CartPageModule,
     CartItemsModule,
+    ButtonOrderModule,
   ],
   declarations: [CartListingPage]
 })

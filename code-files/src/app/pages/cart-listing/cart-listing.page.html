@@ -1,5 +1,5 @@
 <ion-content>
-<h3 class="title">{{(cartItems$|async)?.length}} towards to cart</h3>
+<h3 class="title" *ngIf="(cartItems$|async)?.length">{{(cartItems$|async)?.length}} towards to cart</h3>
 
 <!--.ADDED PACKAGES TO CART FROM CART-->
 <!--<app-cart-items></app-cart-items>-->
@@ -24,6 +24,11 @@
     <p>Cart is empty</p>
 </div>
 
+    <!-- div for the checkout button -->
+
+<app-button-order *ngIf="(cartItems$|async)?.length">
+    Total: <span>22.00</span>
+</app-button-order>
 
         <!-- SAMPLE OF ARRAY FOR FOODS 
                     {
