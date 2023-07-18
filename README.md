@@ -10,7 +10,7 @@ Consecutively, the RGO is committed to promoting the implementation of Sustainab
 
 ## Project Screenshots
 ### Login Page Sample
-![loginpage](./tmp-images/login.PNG)
+![loginpage](./tmp-images/login-new.PNG)
 ### Food Menu (Customer)
 ![foodmenu](./tmp-images/foodmenu.PNG)
 
