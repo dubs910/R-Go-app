@@ -29,14 +29,4 @@
 <app-button-order *ngIf="(cartItems$|async)?.length">
     Total: <span>{{totalAmount$|async|number:'1.2'}}</span>
 </app-button-order>
-
-        <!-- SAMPLE OF ARRAY FOR FOODS 
-                    {
-            id: 1,
-            name: 'Pork Mami w/ Egg + Tetra Drink',
-            price: 90,
-            quantity: 1,
-            image: '../../assets/img/FoodNew/Bfast1.png'
-        },
-        -->
 </ion-content>
