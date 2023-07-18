@@ -27,7 +27,7 @@
     <!-- div for the checkout button -->
 
 <app-button-order *ngIf="(cartItems$|async)?.length">
-    Total: <span>22.00</span>
+    Total: <span>{{totalAmount$|async|number:'1.2'}}</span>
 </app-button-order>
 
         <!-- SAMPLE OF ARRAY FOR FOODS 
