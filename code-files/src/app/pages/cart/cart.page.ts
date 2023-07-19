@@ -3,12 +3,14 @@ import { Category } from 'src/app/models/category.model';
 import { Food } from 'src/app/models/food.model';
 import { FoodService } from 'src/app/services/food.service';
 import { Router } from '@angular/router';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.page.html',
   styleUrls: ['./cart.page.scss'],
 })
+
 export class CartPage implements OnInit {
   categories: Category[] = [];
   foods: Food[] = [];
