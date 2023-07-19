@@ -10,6 +10,7 @@ export class FoodService {
         return [
             {
                 id: 1,
+                categoryId: 1,
                 title:'B1',
                 title2:'Pork Mami w/ Egg + Tetra Drink',
                 price: 90,
@@ -18,6 +19,7 @@ export class FoodService {
             },
             {
                 id: 2,
+                categoryId: 1,
                 title:'B2',
                 title2:'Beef Tapa w/ Egg + Tetra Drink',
                 price: 120,
@@ -26,6 +28,7 @@ export class FoodService {
             },
             {
                 id: 3,
+                categoryId: 1,
                 title:'B3',
                 title2:'Fried Tofu w/ vegetables',
                 price: 100,
@@ -34,6 +37,7 @@ export class FoodService {
             },
             {
                 id: 4,
+                categoryId: 1,
                 title:'B4',
                 title2:'Siomai Rice + Tetra Drink',
                 price: 80,
@@ -43,6 +47,7 @@ export class FoodService {
             
             {
                 id: 5,
+                categoryId: 2,
                 title:'L1',
                 title2:'Chicken Fillet w/ Soup + Tetra Drink',
                 price: 230,
@@ -51,6 +56,7 @@ export class FoodService {
             },
             {
                 id: 6,
+                categoryId: 2,
                 title:'L2',
                 title2:'Beef & Egg Ramen + Tetra Drink',
                 price: 150,
@@ -59,6 +65,7 @@ export class FoodService {
             },
             {
                 id: 7,
+                categoryId: 2,
                 title:'L3',
                 title2:'Pork Steak + Tetra Drink',
                 price: 150,
@@ -67,6 +74,7 @@ export class FoodService {
             },
             {
                 id: 8,
+                categoryId: 2,
                 title:'L4',
                 title2:'Pork Fillet + Tetra Drink',
                 price: 240,
@@ -75,6 +83,7 @@ export class FoodService {
             },
             {
                 id: 9,
+                categoryId: 2,
                 title:'L5',
                 title2:'Caldareta w/ Egg + Tetra Drink',
                 price: 200,
@@ -83,6 +92,7 @@ export class FoodService {
             },
             {
                 id: 10,
+                categoryId: 3,
                 title:'S1',
                 title2:'Pinoy Style Spaghetti + Tetra Drink',
                 price: 75,
@@ -91,6 +101,7 @@ export class FoodService {
             },
             {
                 id: 11,
+                categoryId: 3,
                 title:'S2',
                 title2:'Chicken Sandwich + Tetra Drink',
                 price: 90,
@@ -99,6 +110,7 @@ export class FoodService {
             },
             {
                 id: 12,
+                categoryId: 3,
                 title:'S3',
                 title2:'Bacon Egg Burger + Tetra Drink',
                 price: 80,
@@ -107,6 +119,7 @@ export class FoodService {
             },
             {
                 id: 13,
+                categoryId: 3,
                 title:'S4',
                 title2:'Hotdog Sandwich + Tetra Drink',
                 price: 95,
@@ -115,6 +128,7 @@ export class FoodService {
             },            
             {
                 id: 14,
+                categoryId: 3,
                 title:'S5',
                 title2:'Two Pizza Slices + Tetra Drink',
                 price: 85,

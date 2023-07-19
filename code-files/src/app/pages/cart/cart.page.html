@@ -7,9 +7,12 @@
   <!--Searchbar-->
   <app-searchbar (search)="onSearch($any($event.target).value)"></app-searchbar>
 
-  <!--Categories-->
+  <!-- Categories -->
   <div class="categories">
-    <app-category-item *ngFor="let item of categories" [item]="item"></app-category-item>
+    <ion-button *ngFor="let category of categories" [class.active]="category.active" (click)="onCategoryClick(category.id)" [class.clicked]="category.active">
+      <ion-icon [name]="category.icon"></ion-icon>
+      {{category.label}}
+    </ion-button>
   </div>
 
   <!--Products-->

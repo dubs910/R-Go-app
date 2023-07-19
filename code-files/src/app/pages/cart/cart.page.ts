@@ -1,3 +1,5 @@
+// cart.page.ts
+
 import { Component, OnInit } from '@angular/core';
 import { Category } from 'src/app/models/category.model';
 import { Food } from 'src/app/models/food.model';
@@ -9,6 +11,7 @@ import { Router } from '@angular/router';
   templateUrl: './cart.page.html',
   styleUrls: ['./cart.page.scss'],
 })
+
 export class CartPage implements OnInit {
   categories: Category[] = [];
   foods: Food[] = [];
@@ -25,27 +28,27 @@ export class CartPage implements OnInit {
   getCategories() {
     this.categories = [
       {
-        id: 1,
+        id: 0,
         label: 'All',
-        image: '../../assets/icon/dish.png',
+        icon: 'basket', 
         active: true,
       },
       {
-        id: 2,
+        id: 1,
         label: 'Breakfast',
-        image: '../../assets/icon/pancake.png',
+        icon: 'fast-food',
+        active: false,
+      },
+      {
+        id: 2,
+        label: 'Lunch',
+        icon: 'pizza', 
         active: false,
       },
       {
         id: 3,
-        label: 'Lunch',
-        image: '../../assets/icon/rice.png',
-        active: false,
-      },
-      {
-        id: 4,
         label: 'Snacks',
-        image: '../../assets/icon/snack.png',
+        icon: 'ice-cream', 
         active: false,
       },
     ];
@@ -64,6 +67,18 @@ export class CartPage implements OnInit {
       );
     } else {
       this.filteredFoods = this.foods;
+    }
+  }
+
+  onCategoryClick(categoryId: number) {
+    this.categories.forEach((category) => {
+      category.active = category.id === categoryId;
+    });
+
+    if (categoryId === 0) {
+      this.filteredFoods = this.foods;
+    } else {
+      this.filteredFoods = this.foods.filter((food) => food.categoryId === categoryId);
     }
   }
 }

@@ -18,7 +18,21 @@ ion-content {
     .categories {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-gap: 1rem;
+        grid-gap: .1rem;
+        margin: 0 auto;
+        max-width: 960px; 
+    }
+
+    .categories ion-button {
+        font-size: 12px;
+        font-weight: bold;
+        --background: #9E362B;
+        --color: #ffffff;
+    }
+
+    .categories ion-button.clicked {
+        --background: #D29314;
+        --color: #000000;
     }
 
     .h1list-header {
@@ -35,4 +49,3 @@ ion-content {
         grid-gap: 1rem;
     }
 }
-
