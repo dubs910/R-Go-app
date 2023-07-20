@@ -64,4 +64,17 @@ ion-content {
             font-size: 1.5rem;
         }
     }
+
+    ion-button {
+        --box-shadow: none;
+        --border-radius: 1.8rem;
+        --background: #d97171;
+    
+        text-transform: initial;
+        font-size: 1.2rem;
+        font-weight: 600;
+        height: 70px;
+        display: block;
+        padding-left: 1.6rem;
+    }
 }
