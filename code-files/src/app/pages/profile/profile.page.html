@@ -1,13 +1,31 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>profile</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <div class="profile-header">
+    <h1>Profile</h1>
+  </div>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">profile</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="profile-details">
+    <!-- Add user profile details here (e.g., profile picture, name, email, etc.) -->
+    <p>Name: John Doe</p>
+    <p>Email: johndoe@example.com</p>
+  </div>
+
+  <div class="order-history">
+    <h2>Order History</h2>
+    <ion-list *ngIf="orders.length > 0">
+      <ion-item *ngFor="let order of orders">
+        <ion-label>
+          <p>Order Number: {{ order.orderNumber }}</p>
+          <p>Total Amount: {{ order.totalAmount | currency }}</p>
+          <p>Order Date: {{ order.orderDate | date }}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+    <div class="no-orders" *ngIf="orders.length === 0">
+      <p>No orders found.</p>
+    </div>
+  </div>
+
+  <div class="logout-button">
+    <ion-button color="danger" expand="full" (click)="logout()">Logout</ion-button>
+  </div>
 </ion-content>
