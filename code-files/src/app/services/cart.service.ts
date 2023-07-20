@@ -34,12 +34,8 @@ export class CartService {
             items.forEach(item => {
                 total += item.quantity * item.price;
             })
+
             return total;
         }))
-    }
-
-    // Method to clear the cart and remove all items
-    clearCart() {
-        this.items$.next([]); // Set the items to an empty array to clear the cart
     }
 }

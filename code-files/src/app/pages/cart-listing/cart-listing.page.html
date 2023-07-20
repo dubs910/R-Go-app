@@ -27,6 +27,18 @@
     <!-- div for the checkout button -->
     <app-button-order *ngIf="(cartItems$ | async)?.length">
         Total: <span>{{ totalAmount$ | async | number: '1.2' }}</span>
-        <ion-button expand="full" (click)="checkout()">Checkout</ion-button> <!-- Add the checkout button -->
+        <ion-button expand="full" (click)="checkoutAndTotal()">Checkout</ion-button> <!-- Update the method name here -->
       </app-button-order>
     </ion-content>
+    
+    <ion-footer>
+      <ion-toolbar>
+        <ion-row>
+          <ion-col size="6" offset="3">
+            <ion-button expand="full" color="success" (click)="checkoutAndTotal()"> <!-- Update the method name here -->
+              Checkout and Total
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-toolbar>
+    </ion-footer>
