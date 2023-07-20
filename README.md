@@ -12,8 +12,9 @@ Consecutively, the RGO is committed to promoting the implementation of Sustainab
 ### Login Page Sample
 ![loginpage](./tmp-images/login-new.png)
 ### Food Menu (Customer)
-![foodmenu](./tmp-images/foodmenu.PNG)
-
+![foodmenu](./tmp-images/foodmenu-new.png)
+### Landing Page
+![landingpage](./tmp-images/landingpage.png)
 # Created With 
 ## Ionic Framework
 - Ionic is an open source UI toolkit for building performant, high-quality mobile apps using web technologies — HTML, CSS, and JavaScript — with integrations for popular frameworks like Angular, React, and Vue.
