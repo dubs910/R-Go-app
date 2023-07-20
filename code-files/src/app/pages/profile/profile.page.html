@@ -15,6 +15,14 @@
       <ion-label>Order Number: {{ order.orderNumber }}</ion-label>
       <ion-label>Total Amount: {{ order.totalAmount | currency }}</ion-label>
       <ion-label>Order Date: {{ order.orderDate | date }}</ion-label>
+      <!-- Display the cart items with quantity and total price for each order -->
+      <ion-list>
+        <ion-item *ngFor="let item of order.items">
+          <ion-label>{{ item.name }}</ion-label>
+          <ion-label>Quantity: {{ item.quantity }}</ion-label>
+          <ion-label>Total Price: {{ item.quantity * item.price | currency }}</ion-label>
+        </ion-item>
+      </ion-list>
     </ion-item>
   </ion-list>
 

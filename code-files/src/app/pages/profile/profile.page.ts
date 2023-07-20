@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http'; // Import the HttpClient module
 
 @Component({
   selector: 'app-profile',
@@ -13,26 +14,32 @@ export class ProfilePage implements OnInit {
 
   constructor(
     private router: Router,
-    private authService: AuthService
-    ){}
+    private authService: AuthService,
+    private http: HttpClient // Inject the HttpClient module
+  ) {}
 
   ngOnInit() {
     // Fetch the user data from the AuthService
     const user = this.authService.getUserData();
-    this.email = user.email; 
+    this.email = user.email;
     // Assign the email from the user data
     // Fetch the user's order history and assign it to the 'orders' property
     this.fetchOrders();
   }
 
   fetchOrders() {
-    // Implement the logic to fetch the user's order history from your database or service
-    // For now, I'll just use dummy data for demonstration purposes
-    this.orders = [
-      { orderNumber: '12345', totalAmount: 50.0, orderDate: new Date() },
-      { orderNumber: '54321', totalAmount: 30.0, orderDate: new Date() },
-      // Add more dummy orders as needed
-    ];
+    // Make an HTTP GET request to the fetch_orders.php script that reads the XML data
+    this.http
+      .get<any[]>('http://localhost/fetch_orders.php') // Replace with the correct URL to your PHP script
+      .subscribe(
+        (response) => {
+          // Handle the response and assign the orders to the 'orders' property
+          this.orders = response;
+        },
+        (error) => {
+          console.error('Error fetching order history.', error);
+        }
+      );
   }
 
   logout() {

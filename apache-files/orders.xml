@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cart>
+<item>
+<id>1</id>
+<name>Pork Mami w/ Egg + Tetra Drink</name>
+<price>90</price>
+<quantity>1</quantity>
+</item>
+<item>
+<id>2</id>
+<name>Beef Tapa w/ Egg + Tetra Drink</name>
+<price>120</price>
+<quantity>1</quantity>
+</item>
+</cart>
