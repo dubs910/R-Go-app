@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cart>
+<item>
+<id>2</id>
+<name>Beef Tapa w/ Egg + Tetra Drink</name>
+<price>120</price>
+<quantity>8</quantity>
+</item>
+<item>
+<id>4</id>
+<name>Siomai Rice + Tetra Drink</name>
+<price>80</price>
+<quantity>12</quantity>
+</item>
+</cart>
