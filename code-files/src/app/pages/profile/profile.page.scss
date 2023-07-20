@@ -1,0 +1,65 @@
+ion-content {
+    --padding-start: 2rem;
+    --padding-end: 2rem;
+  
+    .profile-header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1.5rem;
+  
+      h1 {
+        font-size: 3rem;
+        font-weight: 400;
+        color: #9E362B; /* Red color */
+      }
+    }
+  
+    .profile-details {
+      p {
+        font-size: 1.2rem;
+        color: #000000; /* Black color */
+        margin-bottom: 0.5rem;
+      }
+    }
+  
+    .order-history {
+      h2 {
+        font-size: 1.7rem;
+        font-weight: 700;
+        color: #000000; /* Black color */
+        margin-bottom: 1rem;
+      }
+  
+      ion-list {
+        ion-item {
+          ion-label {
+            p {
+              font-size: 1.2rem;
+              color: #000000; /* Black color */
+              margin-bottom: 0.2rem;
+            }
+          }
+        }
+      }
+  
+      .no-orders {
+        p {
+          font-size: 1.2rem;
+          color: #000000; /* Black color */
+          margin-bottom: 0.2rem;
+        }
+      }
+    }
+  
+    .logout-button {
+      margin-top: 2rem;
+  
+      ion-button {
+        font-size: 1.2rem;
+        font-weight: bold;
+        --background: #9E362B; /* Darker red color */
+      }
+    }
+  }
+  
