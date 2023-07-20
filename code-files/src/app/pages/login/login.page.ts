@@ -40,7 +40,7 @@ export class LoginPage {
         },
         (error: HttpErrorResponse) => {
           console.error('Error during login:', error);
-          this.errorMessage = 'An error occurred during login.';
+          this.errorMessage = 'Incorrect email or password, please try again.';
           this.presentErrorAlert();
         }
       );
