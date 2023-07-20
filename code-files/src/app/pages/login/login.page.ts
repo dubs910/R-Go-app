@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -12,10 +14,14 @@ export class LoginPage {
   password: string = '';
   errorMessage: string = '';
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(
+    private http: HttpClient,
+    private router: Router,
+    private authService: AuthService,
+    private alertController: AlertController
+  ) {}
 
   login() {
-    // Make a request to the PHP backend to check user credentials
     this.http
       .post<any>('http://localhost/login.php', {
         email: this.email,
@@ -23,18 +29,39 @@ export class LoginPage {
       })
       .subscribe(
         (response) => {
-          console.log('Response:', response); // Log the complete response
           if (response.success) {
-            // Redirect to the dashboard or home page upon successful login
+            // Store the user's data in the AuthService after a successful login
+            this.authService.login(this.email, response.user_data);
             this.router.navigate(['/tabs']);
           } else {
             this.errorMessage = 'Invalid email or password.';
+            this.presentErrorAlert();
           }
         },
         (error: HttpErrorResponse) => {
           console.error('Error during login:', error);
           this.errorMessage = 'An error occurred during login.';
+          this.presentErrorAlert();
         }
       );
+  }
+
+  async presentErrorAlert() {
+    const alert = await this.alertController.create({
+      header: 'Login Error',
+      message: this.errorMessage,
+      buttons: ['OK'],
+    });
+
+    await alert.present();
+  }
+  
+  logout() {
+    // Implement the logout logic here, e.g., clearing session, redirecting to login page, etc.
+    console.log('User logged out');
+    
+    // Clear the email and password fields after logging out
+    this.email = '';
+    this.password = '';
   }
 }

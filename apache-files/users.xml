@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <users>
     <user>
-        <email>cics@gmail.com</email>
-        <password>password1</password>
-    </user>
-    <user>
-        <email>user2@example.com</email>
-        <password>password2</password>
+        <email>cics.alangilan@g.batstate-u.edu.ph</email>
+        <password>password</password>
     </user>
     <!-- Add more users as needed -->
 </users>

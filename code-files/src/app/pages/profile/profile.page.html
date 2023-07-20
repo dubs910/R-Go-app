@@ -1,31 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
 <ion-content>
-  <div class="profile-header">
-    <h1>Profile</h1>
-  </div>
+  <ion-item>
+    <ion-label>Email: {{ email }}</ion-label>
+  </ion-item>
 
-  <div class="profile-details">
-    <!-- Add user profile details here (e.g., profile picture, name, email, etc.) -->
-    <p>Name: John Doe</p>
-    <p>Email: johndoe@example.com</p>
-  </div>
+  <ion-list>
+    <ion-list-header>Order History</ion-list-header>
+    <ion-item *ngFor="let order of orders">
+      <ion-label>Order Number: {{ order.orderNumber }}</ion-label>
+      <ion-label>Total Amount: {{ order.totalAmount | currency }}</ion-label>
+      <ion-label>Order Date: {{ order.orderDate | date }}</ion-label>
+    </ion-item>
+  </ion-list>
 
-  <div class="order-history">
-    <h2>Order History</h2>
-    <ion-list *ngIf="orders.length > 0">
-      <ion-item *ngFor="let order of orders">
-        <ion-label>
-          <p>Order Number: {{ order.orderNumber }}</p>
-          <p>Total Amount: {{ order.totalAmount | currency }}</p>
-          <p>Order Date: {{ order.orderDate | date }}</p>
-        </ion-label>
-      </ion-item>
-    </ion-list>
-    <div class="no-orders" *ngIf="orders.length === 0">
-      <p>No orders found.</p>
-    </div>
-  </div>
-
-  <div class="logout-button">
-    <ion-button color="danger" expand="full" (click)="logout()">Logout</ion-button>
-  </div>
+  <ion-button (click)="logout()" expand="full" color="danger">Logout</ion-button>
 </ion-content>
