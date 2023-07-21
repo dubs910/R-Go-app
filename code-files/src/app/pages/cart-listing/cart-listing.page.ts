@@ -102,10 +102,6 @@ export class CartListingPage {
   }
 
   private cartToXml(cartItems: Observable<CartItem[]>): string {
-    // Implement the logic to convert cart items to XML format here
-    // For example, you can use a loop to map each cart item to an XML element.
-    // Ensure the XML structure matches the format expected by the PHP script.
-    // Example:
     let xmlData = '<?xml version="1.0" encoding="UTF-8"?>\n<cart>\n';
     cartItems.subscribe((items) => {
       items.forEach((item) => {
