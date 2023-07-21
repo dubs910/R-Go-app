@@ -1,41 +1,16 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Profile</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
   <ion-item>
-    <ion-label>Email: {{ email }}</ion-label>
+    <ion-label>Hello, {{ email }}</ion-label>
   </ion-item>
-
-  <div *ngIf="xmlData">
-    <p>itemname: {{ xmlData.getElementsByTagName('item')[0]?.getElementsByTagName('name')[0]?.textContent }}</p>
-  </div>
 
   <ion-list>
     <ion-list-header>Order History</ion-list-header>
-<<<<<<< Updated upstream
-    <ion-item *ngFor="let order of orders">
-      <ion-label>Order Number: {{ order.orderNumber }}</ion-label>
-      <ion-label>Total Amount: {{ order.totalAmount | currency }}</ion-label>
-      <ion-label>Order Date: {{ order.orderDate | date }}</ion-label>
-      <!-- Display the cart items with quantity and total price for each order -->
-      <ion-list>
-        <ion-item *ngFor="let item of order.items">
-          <ion-label>{{ item.name }}</ion-label>
-          <ion-label>Quantity: {{ item.quantity }}</ion-label>
-          <ion-label>Total Price: {{ item.quantity * item.price | currency }}</ion-label>
-        </ion-item>
-      </ion-list>
-=======
     <ion-item *ngFor="let order of xmlData">
       <!-- Use a space between the order name and quantity -->
       <ion-label>{{ order.name }} <br><br> Quantity: {{ order.quantity }} <br></ion-label>
 
       <!-- Or, use a separator like a dash (-) -->
       <!-- <ion-label>{{ order.name }} - Quantity: {{ order.quantity }}</ion-label> -->
->>>>>>> Stashed changes
     </ion-item>
   </ion-list>
 </ion-content>
