@@ -9,6 +9,10 @@
     <ion-label>Email: {{ email }}</ion-label>
   </ion-item>
 
+  <div *ngIf="xmlData">
+    <p>itemname: {{ xmlData.getElementsByTagName('item')[0]?.getElementsByTagName('name')[0]?.textContent }}</p>
+  </div>
+
   <ion-list>
     <ion-list-header>Order History</ion-list-header>
     <ion-item *ngFor="let order of orders">
@@ -25,6 +29,10 @@
       </ion-list>
     </ion-item>
   </ion-list>
-
-  <ion-button (click)="logout()" expand="full" color="danger">Logout</ion-button>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button (click)="logout()" expand="full" color="danger">Logout</ion-button>
+  </ion-toolbar>
+</ion-footer>
