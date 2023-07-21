@@ -15,6 +15,7 @@
 
   <ion-list>
     <ion-list-header>Order History</ion-list-header>
+<<<<<<< Updated upstream
     <ion-item *ngFor="let order of orders">
       <ion-label>Order Number: {{ order.orderNumber }}</ion-label>
       <ion-label>Total Amount: {{ order.totalAmount | currency }}</ion-label>
@@ -27,6 +28,14 @@
           <ion-label>Total Price: {{ item.quantity * item.price | currency }}</ion-label>
         </ion-item>
       </ion-list>
+=======
+    <ion-item *ngFor="let order of xmlData">
+      <!-- Use a space between the order name and quantity -->
+      <ion-label>{{ order.name }} <br><br> Quantity: {{ order.quantity }} <br></ion-label>
+
+      <!-- Or, use a separator like a dash (-) -->
+      <!-- <ion-label>{{ order.name }} - Quantity: {{ order.quantity }}</ion-label> -->
+>>>>>>> Stashed changes
     </ion-item>
   </ion-list>
 </ion-content>

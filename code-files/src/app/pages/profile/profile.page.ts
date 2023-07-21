@@ -9,9 +9,14 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./profile.page.scss'],
 })
 export class ProfilePage implements OnInit {
+<<<<<<< Updated upstream
   email: string = ''; 
   orders: any; 
   xmlData: any;
+=======
+  email: string = '';
+  xmlData: any[] = []; // Initialize xmlData as an empty array
+>>>>>>> Stashed changes
 
   constructor(
     private router: Router,
@@ -22,6 +27,7 @@ export class ProfilePage implements OnInit {
   ngOnInit() {
     const user = this.authService.getUserData();
     this.email = user.email;
+<<<<<<< Updated upstream
     this.fetchOrders();
     this.fetchXMLData();
   }
@@ -80,11 +86,43 @@ export class ProfilePage implements OnInit {
     return xml;
   }
 
+=======
+    this.fetchXMLData(); 
+  }
+
+  fetchXMLData() {
+    console.log('Fetching XML data...');
+    this.http.get('http://localhost/orders.xml', { responseType: 'text' }).subscribe(
+      (response) => {
+        console.log('XML data received:', response);
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(response, 'text/xml');
+
+        // Extract the array of items from the XML data (assuming 'item' is the tag name)
+        const itemsArray = Array.from(xml.getElementsByTagName('item'));
+
+        // Convert the XML data to JavaScript objects
+        const orders = [];
+        for (let orderItem of itemsArray) {
+          orders.push({
+            name: orderItem.querySelector('name')?.textContent || '',
+            quantity: orderItem.querySelector('quantity')?.textContent || '',
+          });
+        }
+
+        // Store the XML data in the 'xmlData' property
+        this.xmlData = orders;
+      },
+      (error) => {
+        console.error('Error fetching XML data.', error);
+      }
+    );
+  }
+
+>>>>>>> Stashed changes
   logout() {
     // Call the logout method in the AuthService
     this.authService.logout();
     this.router.navigate(['/login']);
-    // Redirect to the login page after logout
-    // You can also show a success message here if needed
   }
 }
